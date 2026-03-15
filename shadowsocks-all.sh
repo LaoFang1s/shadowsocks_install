@@ -371,9 +371,9 @@ install_shadowsocks_libev(){
         distro=$(lsb_release -si | tr '[:upper:]' '[:lower:]')
         codename=$(lsb_release -sc)
         if [ "${distro}" == "debian" ]; then
-            apt-get install -y "shadowsocks-libev=3.3.6-2~debian.$(lsb_release -sr | cut -d. -f1)~${codename}" > /dev/null 2>&1
+            apt-get install -y "shadowsocks-libev=3.3.5-12~debian.$(lsb_release -sr | cut -d. -f1)~${codename}" > /dev/null 2>&1
         else
-            apt-get install -y "shadowsocks-libev=3.3.6-2~ubuntu.$(lsb_release -sr | cut -d. -f1)~${codename}" > /dev/null 2>&1
+            apt-get install -y "shadowsocks-libev=3.3.5-12~ubuntu.$(lsb_release -sr | cut -d. -f1)~${codename}" > /dev/null 2>&1
         fi
     fi
     
