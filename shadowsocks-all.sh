@@ -381,10 +381,10 @@ download_files(){
         elif check_sys packageManager apt; then
             download "${shadowsocks_go_init}" "${shadowsocks_go_debian}"
         fi
-    elif [ "${selected}" == '4' ]; then
-        get_libev_ver
-        shadowsocks_libev_file="shadowsocks-libev-$(echo "${libev_ver}" | sed -e 's/^[a-zA-Z]//g')"
-        shadowsocks_libev_url="https://github.com/shadowsocks/shadowsocks-libev/releases/download/${libev_ver}/${shadowsocks_libev_file}.tar.gz"
+elif [ "${selected}" == '4' ]; then
+    libev_ver="v3.3.5"
+    shadowsocks_libev_file="shadowsocks-libev-3.3.5"
+    shadowsocks_libev_url="https://github.com/shadowsocks/shadowsocks-libev/archive/refs/tags/v3.3.5.tar.gz"
 
         download "${shadowsocks_libev_file}.tar.gz" "${shadowsocks_libev_url}"
         if check_sys packageManager yum; then
